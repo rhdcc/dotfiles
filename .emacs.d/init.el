@@ -14,6 +14,7 @@
 (package-initialize)
 (package-refresh-contents)
 
+;; Xenops
 (unless (package-installed-p 'xenops)
   (package-install 'xenops))
 (add-hook 'latex-mode-hook #'xenops-mode)
@@ -27,8 +28,19 @@
 (require 'evil)
 (evil-mode 1)
 
-(setq inhibit-startup-message t)
+;; Recentf
+(recentf-mode 1)
+(setq recentf-max-menu-items 25)
+(setq recentf-max-saved-terms 25)
+(defun recentf-ido-find-file ()
+  "Find a recent file using Ido."
+  (interactive)
+  (let ((file (ido-completing-read "Choose recent file: " recentf-list nil t)))
+    (when file
+      (find-file file))))
+(global-set-key "\C-x\ \C-r" 'recentf-ido-find-file)
 
+(setq inhibit-startup-message t)
 (tool-bar-mode 0)
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
