@@ -1,6 +1,9 @@
 *
 !.gitignore
-!i3/**
-!nvim/**
-!ghostty/**
+!/i3/
+!/i3/**/*
+!nvim/
+!nvim/**/*
+!ghostty/
+!ghostty/**/*
 !user-dirs.dirs
