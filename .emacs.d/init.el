@@ -1,6 +1,3 @@
-;; What is recentf in emacs?
-;; What is company in emacs?
-
 ;; Set font
 (set-frame-font "Iosevka Nerd Font Mono")
 
@@ -15,7 +12,7 @@
 ;; and `package-pinned-packages`. Most users will not need or want to do this.
 ;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
-(package-refresh-contents) ; <- a tad slow
+(package-refresh-contents)
 
 ;; Download Evil
 (unless (package-installed-p 'evil)
