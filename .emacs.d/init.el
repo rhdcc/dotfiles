@@ -28,6 +28,14 @@
 (require 'evil)
 (evil-mode 1)
 
+;; Org Roam
+(unless (package-installed-p 'org-roam)
+  (package-install 'org-roam))
+(require 'org-roam)
+(make-directory "~/OrgRoam")
+(setq org-roam-directory "~/OrgRoam")
+(org-roam-db-autosync-mode)
+
 ;; Recentf
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
@@ -58,7 +66,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(evil xenops)))
+ '(package-selected-packages '(evil org-roam xenops)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
