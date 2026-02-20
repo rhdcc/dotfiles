@@ -42,23 +42,23 @@
 (column-number-mode 1)
 (global-display-line-numbers-mode 1)
 
+;; Which key
+(which-key-mode 1)
+
 ;; ido
-(ido-mode 1)
-(ido-everywhere 1)
-(setq ido-auto-merge-work-directories-length -1)
+;; (ido-mode 1)
+;; (ido-everywhere 1)
+;; (setq ido-auto-merge-work-directories-length -1)
 ;; (ido-ubiquitous-mode 1)
+
+;; Fido
+(fido-mode 1)
+(fido-vertical-mode 1)
 
 ;; Recentf
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
 (setq recentf-max-saved-terms 25)
-(defun recentf-ido-find-file ()
-  "Find a recent file using Ido."
-  (interactive)
-  (let ((file (ido-completing-read "Choose recent file: " recentf-list nil t)))
-    (when file
-      (find-file file))))
-(global-set-key "\C-x\ \C-r" 'recentf-ido-find-file)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -67,7 +67,7 @@
  ;; If there is more than one, they won't work right.
  '(org-agenda-files
    '("~/OrgRoam/things_to_do.org" "/home/tau/OrgRoam/hello_roam.org"))
- '(package-selected-packages '(evil org-roam xenops)))
+ '(package-selected-packages '(evil org-roam vertico xenops)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
