@@ -25,6 +25,11 @@
   (column-number-mode 1)
   (global-display-line-numbers-mode 1)
 
+  (setq-default tab-width 4)  ; Set the default tab width to 4 spaces
+  (setq-default indent-tabs-mode nil)  ; Use spaces instead of tabs
+  (setq c-basic-offset 4)  ; Set C mode indentation to 4 spaces
+
+
   ;; Which key
   (which-key-mode 1)
 
@@ -45,11 +50,12 @@
 
 ;; Xenops
 (use-package xenops
+  :if nil
   :init
-  (add-hook 'latex-mode-hook #'xenops-mode)
-  (add-hook 'LaTeX-mode-hook #'xenops-mode)
+  ;; (add-hook 'latex-mode-hook #'xenops-mode)
+  ;; (add-hook 'LaTeX-mode-hook #'xenops-mode)
   :config
-  (xenops-mode 1))
+  ;; (xenops-mode 1))
 
 ;; LaTeX
 (use-package tex
