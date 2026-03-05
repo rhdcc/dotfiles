@@ -6,6 +6,8 @@
 
 (use-package emacs
   :init
+  (if (file-exists-p "~/.emacs.d/custom.el") nil
+	(make-empty-file "~/.emacs.d/custom.el"))
   (setq custom-file
     (expand-file-name "custom.el" user-emacs-directory))
   (load custom-file)
@@ -20,15 +22,10 @@
   ;; General Settings
   (setq inhibit-startup-message t)
   (tool-bar-mode 0)
-  (menu-bar-mode 0)
-  (scroll-bar-mode 0)
-  (column-number-mode 1)
-  (global-display-line-numbers-mode 1)
 
   (setq-default tab-width 4)  ; Set the default tab width to 4 spaces
   (setq-default indent-tabs-mode nil)  ; Use spaces instead of tabs
   (setq c-basic-offset 4)  ; Set C mode indentation to 4 spaces
-
 
   ;; Which key
   (which-key-mode 1)
@@ -54,8 +51,9 @@
   :init
   ;; (add-hook 'latex-mode-hook #'xenops-mode)
   ;; (add-hook 'LaTeX-mode-hook #'xenops-mode)
-  :config
-  ;; (xenops-mode 1))
+  ;; :config
+  ;; (xenops-mode 1)
+  )
 
 ;; LaTeX
 (use-package tex
@@ -63,11 +61,13 @@
 
 ;; Evil
 (use-package evil
-  :config
+  :ensure t
+  :init
   (evil-mode 1))
 
 ;; Org Roam
 (use-package org-roam
+  :ensure t
   :init
   (if (file-exists-p "~/OrgRoam") nil
       (make-directory "~/OrgRoam"))
