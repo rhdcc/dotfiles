@@ -14,6 +14,8 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.cmd([[set noshowmode]])
 
+vim.opt.clipboard = 'unnamedplus'
+
 -- Minimum # of lines to keep above/below the cursor
 vim.opt.scrolloff = 4
 
