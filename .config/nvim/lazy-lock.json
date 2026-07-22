@@ -1,9 +1,0 @@
-{
-  "compile-mode.nvim": { "branch": "latest", "commit": "4feef0bd6485218f50563a61140233f16561c786" },
-  "darkvoid.nvim": { "branch": "master", "commit": "45be993a5617e05811b6b293c05e6aded7003cc9" },
-  "gruvbox.nvim": { "branch": "main", "commit": "68c3460a5d1d1a362318960035c9f3466d5011f5" },
-  "lazy.nvim": { "branch": "main", "commit": "85c7ff3711b730b4030d03144f6db6375044ae82" },
-  "mini.nvim": { "branch": "main", "commit": "64e95aa77587d04f97a5579b2106a82a08a7d968" },
-  "nvim-lspconfig": { "branch": "master", "commit": "5a137448fd921a0c5d3939cb75e60d21f64e4606" },
-  "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" }
-}
